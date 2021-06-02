@@ -1,3 +1,4 @@
+#ifndef Usuario_h
 #include <iostream>
 #include "Video.h"
 using namespace std;
@@ -17,7 +18,7 @@ class Usuario{
         string getNombre(){ return nombre;};
         int getContadorVideos(){ return contadorVideos; };
         int getUnIdMisVideos(int indice);
-        int operator+(int id);
+        void operator+(int id);
 };
 
 Usuario::Usuario(){
@@ -35,7 +36,7 @@ int Usuario::getUnIdMisVideos(int indice){
     }
 }
 
-int Usuario::operator+(int id){
+void Usuario::operator+(int id){
     bool notPossible = false;
     for(int i = 0; i < 20; i++){
         if (misVideos[i] == id || contadorVideos >= 20)
@@ -49,3 +50,4 @@ int Usuario::operator+(int id){
     }
     notPossible = false; 
 }
+#endif
