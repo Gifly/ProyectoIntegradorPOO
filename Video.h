@@ -1,3 +1,4 @@
+#ifndef Video_h
 #include <iostream>
 
 using namespace std;
@@ -10,7 +11,7 @@ class Video{
         int duracion;
         int calificacion;
 
-    public:
+    protected:
         Video();
         Video(int id, string _titulo, string _genero, int _duracion, int _calificacion);
         void setIdVideo(int id){ idVideo = id;};
@@ -41,3 +42,9 @@ Video::Video(int id, string _titulo, string _genero, int _duracion, int _calific
     duracion = _duracion;
     calificacion = _calificacion;
 }
+
+void Video::muestra(){
+    //TODO
+}
+
+#endif
