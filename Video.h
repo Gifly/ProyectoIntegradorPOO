@@ -1,17 +1,19 @@
 #ifndef Video_h
+#define Video_h
 #include <iostream>
+#include <string>
 
 using namespace std;
 
 class Video{
-    private:
+    protected:
         int idVideo;
         string titulo;
         string genero;
         int duracion;
         int calificacion;
 
-    protected:
+    public:
         Video();
         Video(int id, string _titulo, string _genero, int _duracion, int _calificacion);
         void setIdVideo(int id){ idVideo = id;};
@@ -47,4 +49,4 @@ void Video::muestra(){
     //TODO
 }
 
-#endif
+#endif /* Video_h */

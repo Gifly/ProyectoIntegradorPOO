@@ -1,5 +1,6 @@
 #include <iostream>
 #include <fstream>
+#include <string>
 #include "Usuario.h"
 #include "Video.h"
 #include "Episodio.h"
@@ -7,7 +8,7 @@
 using namespace std;
 
 int main(){
-    Video *arrVideo[50];
+    Video *arrVideos[50];
     Usuario persona1;
     string nombreArchivo;
     //cout << "Ingresa el archivo de video que desees" << endl;
@@ -20,15 +21,15 @@ int main(){
     while(ArchivoVideos >> tipoVideo){
         if(tipoVideo ==  'p'){
             ArchivoVideos >> id >> titulo >> genero >> duracion >> calificacion;
-            arrVideo[i] = new Pelicula(id, titulo, genero, duracion, calificacion);
+            arrVideos[i] = new Pelicula(id, titulo, genero, duracion, calificacion);
             i++;
         }
         else if(tipoVideo == 'e')
         {
             ArchivoVideos >> id >> titulo >> genero >> duracion >> calificacion >> serie >> episodio >> temporada;
-            arrVideo[i] = new Episodio(id, titulo, genero, duracion, calificacion, serie, episodio, temporada);
+            arrVideos[i] = new Episodio(serie, episodio, temporada,id,  titulo, genero, duracion, calificacion);
+            i++;
         }
     }
-    
     return 0;
 }
