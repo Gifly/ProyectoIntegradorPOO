@@ -21,7 +21,7 @@ class Video{
         void setTitulo(string _titulo){ titulo = _titulo; };
         string getTitulo(){ return titulo; };
         void setGenero(string _genero){ genero = _genero; };
-        string setGenero(){ return genero; };
+        string getGenero(){ return genero; };
         void setDuracion(int _duracion){ duracion = _duracion; };
         int getDuracion(){ return duracion; };
         void setCalificacion(int _calificacion){ calificacion = _calificacion; };
@@ -43,10 +43,6 @@ Video::Video(int id, string _titulo, string _genero, int _duracion, int _calific
     genero = _genero;
     duracion = _duracion;
     calificacion = _calificacion;
-}
-
-void Video::muestra(){
-    //TODO
 }
 
 #endif /* Video_h */
